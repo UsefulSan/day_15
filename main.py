@@ -1,5 +1,5 @@
 from os.path import exists
-
+from typing import Any
 
 def read_file(file_path: str) -> list:
     """
@@ -36,7 +36,7 @@ def map_func(data: list, num_col: str) -> list:
     return list(map_text)
 
 
-def unique_func(data: list, _: any) -> list:
+def unique_func(data: list, _: Any) -> list:
     """
     Оставляет только уникальные строки
     :param _: любой параметр, не используется
@@ -46,7 +46,7 @@ def unique_func(data: list, _: any) -> list:
     return list(unique_text)
 
 
-def sort_func(data: list, param: str) -> list:
+def sort_func(data: list, param: str):
     """
     Сортирует список по возрастанию или убыванию, в зависимости от param
     :param data: список с данными для обработки
